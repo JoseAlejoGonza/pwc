@@ -5,22 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home</title>
-    <link rel="stylesheet" href="./styles-home.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Anton' type='text/css'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Neucha' type='text/css'>
+    <link rel="stylesheet" href="./styles-home.css">
     <div class="header">
-        <a href="./login/signIn.html">Sign in</a>
-        <a href="./login/signUp.html">Register</a>
-        <a href="#">Colombia</a>
+        <a href="https://www.pwc.com/co/es/content/pwc/userReg/login.es_co.html?redirectUrl=B-8M80eOnYE_bamYT2vu3lQ1kEem0GfDs0acquzFgY4=&referrer=B-8M80eOnYE_bamYT2vu3lQ1kEem0GfDs0acquzFgY4=&parentPagePath=/content/pwc/co/es"> <span class="glyphicon glyphicon-user"></span>Sign in</a>
+        <a href="https://www.pwc.com/co/es/content/pwc/userReg/register.es_co.html?redirectUrl=B-8M80eOnYE_bamYT2vu3lQ1kEem0GfDs0acquzFgY4=&referrer=B-8M80eOnYE_bamYT2vu3lQ1kEem0GfDs0acquzFgY4=&parentPagePath=/content/pwc/co/es">Register</a>
+        <a href="#"><span class="glyphicon glyphicon-map-marker"></span> Colombia</a>
     </div>    
 </head>
 <body>
     <div class="border-menu">
         <nav class="nav-order">
             <ul>
-                <li><a href="#">Servicios</a>
-                    <ul>
+                <li><a href="#services" onclick="active()">Servicios</a>
+                    <ul id="submenu-services">
                         <h2>Servicios</h2>
                         <li><input type="button" value="Consultoría de Negocio"></li>
                         <li><input type="button" value="Auditoría"></li>
@@ -88,44 +88,111 @@
     </div>
     <div class="information-bar">
         <a href="https://www.pwc.com/gx/en/the-new-equation.html">
-            <h1>¿Qué es la nueva Ecuacion?</h1>
-            <button>Conoce más</button>
+            <h1>¿Qué es la nueva Ecuacion?
+            <button class="btn button-more">Conoce más <span class="glyphicon glyphicon-menu-right"></span></button>
+
+            </h1>
         </a>
     </div>
-    <div class="slideshow-container">
+    <div class="col-md-12">
+        <div class="slideshow-container">
 
-        <li id="slide1" class="mySlides fade">
-          <div class="numbertext">1 / 3</div>
-          <img src="./img/Grupo_121.png" style="width:100%">
-          <div class="text">Caption Text</div>
-        </li>
-        
-        <li id="slide2" class="mySlides fade">
-          <div class="numbertext">2 / 3</div>
-          <img src="./img/Grupo_136.png" style="width:100%">
-          <div class="text">Caption Two</div>
-        </li>
-        
-        <li id="slide3" class="mySlides fade">
-          <div class="numbertext">3 / 3</div>
-          <img src="./img/Grupo_141.png" style="width:100%">
-          <div class="text">Caption Three</div>
-        </li>
-        
+            <li id="slide1" class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="./img/Grupo_121.png" style="width:100%">
+              <div class="text">Caption Text</div>
+            </li>
+            
+            <li id="slide2" class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="./img/Grupo_136.png" style="width:100%">
+              <div class="text">Caption Two</div>
+            </li>
+            
+            <li id="slide3" class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="./img/Grupo_141.png" style="width:100%">
+              <div class="text">Caption Three</div>
+            </li>
+            
+        </div>
+        <br>
+        <ul style="text-align:center">
+            <li class="dot">
+                <a href="#slide1"></a>
+            </li> 
+            <li class="dot">
+                <a href="#slide2"></a>
+            </li> 
+            <li class="dot">
+                <a href="#slide3"></a>
+            </li> 
+        </ul>
     </div>
-    <br>
-    
-    <ul style="text-align:center">
-        <li class="dot">
-            <a href="#slide1"></a>
-        </li> 
-        <li class="dot">
-            <a href="#slide2"></a>
-        </li> 
-        <li class="dot">
-            <a href="#slide3"></a>
-        </li> 
-    </ul>
+    <div class="col-md-12 margin-notice">
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+            <img src="./img/notice-1.png" alt="notice-1">
+            <p>Estatuto Tributario PwC 2021 ¡Cómpralo aquí!</p>
+        </div>
+        <div class="col-md-3">
+            <img src="./img/notice-2.png" alt="notice-2">
+            <p>Estatuto Contable PwC ¡Adquiérelo ya! Indispensable para comprender información financiera de tu negocio y tratamientos contables de las PyME.</p>
+        </div>
+        <div class="col-md-3">
+            <img src="./img/notice-3.png" alt="notice-3">
+            <p>Presentación de resultados ODS 2018. Principales resultados sobre cómo más de 700 empresas en 21 países reportan su gestión frente a los objetivos globales.</p>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <div class="col-md-12 contact-pwc">
+        <div class="col-md-12">
+            <h1>Thought Leaderships PwC Colombia</h1>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+            <h2>PwC Times</h2>
+            <p><span>Información valiosa para personas y empresas valiosas.</span>Queremos que conozcas de primera mano los desafíos y retos que enfrenta hoy el mundo. Consulta lo último en tendencia para el crecimiento de las empresas, los sectores y la sociedad.</p>
+            <button>Conoce el PwC Times</button>
+        </div>
+        <div class="col-md-6 scroll">
+            <img src="./img/notice-1.png" alt="notice-1">
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+            <img src="./img/notice-3.png" alt="notice-3">
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <div class="col-md-12 location">
+        <h2>Síguenos PwC Colombia</h2>
+        <img src="./img/follow_facebook.png" alt="follow_facebook">
+        <img src="./img/follow_twitter.png" alt="follow_twitter">
+        <img src="./img/follow_linkedin.png" alt="follow_linkedin">
+        <img src="./img/follow_youtube.png" alt="follow_youtube">
+        <img src="./img/follow_instagram.png" alt="follow_instagram">
+    </div>
+    <div class="col-md-12 footer">
+        <p>PwC Colombia</p>
+        <div class="border-footer-options">
+            <ul>
+                <li>Acerca de Nosotros</li>
+                <li>Nuestros Servicios</li>
+            </ul>
+        </div>
+        <div>
+            <p>© 2020 - 2021 PwC. PricewaterhouseCoopers. PwC se refiere a las Firmas colombianas que hacen parte de la red global de PricewaterhouseCoopers International Limited, cada una de las cuales es una entidad legal separada e independiente. Todos los derechos reservados.</p>
+            <ul>
+                <li>Política de privacidad</li>
+                <li>Términos legales</li>
+                <li>Acerca del proveedor de este sitio</li>
+                <li>Política de tratamiento de datos personales</li>
+            </ul>
+        </div>
+    </div>
+    <script src="./home.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
-<script src="./home.js"></script>
 </html>
